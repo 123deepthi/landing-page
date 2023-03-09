@@ -1,0 +1,198 @@
+<html>
+<title>pro</title>
+<head></head>
+<body>
+<style>
+html { 
+  background: url(j1.jpg) no-repeat center fixed; 
+  background-size: cover;
+}h1 {
+  color: red;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+}
+ul {
+  list-style-type: none;
+  margin:0px ;
+  padding:0px;
+  overflow: hidden;
+  background-color: #333;
+}
+li {
+  float: left;
+}
+li a {
+  display:block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+}
+li a:hover {
+  background-color: grey;
+}
+p.normal {
+  font-style: normal;color:white;font-size:30px;
+}
+p.oblique {
+  font-style: oblique;color:white;font-size:30px;
+}
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing:border box;}
+
+input[type=text], select, textarea {
+  width: 98%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-sizing:border-box;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 1px;
+  background-color:;
+  padding: 10px;
+}
+</style>
+
+<h1>Contact Form</h1>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">Passport ID</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your ID..">
+
+    <label for="lname">Visa Number</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your number..">
+ <label for="lname">Card Number</label>
+    <input type="text" id="lname" name="card number" placeholder="Your number..">
+
+    <label for="Fromcountry">Exchanging FROM Country</label>
+    <select id="country" name="Exchanging from Country">
+      <option value="Europe">Europe</option>
+      <option value="England">England</option>
+      <option value="usa">USA</option>
+      <option value="India">India</option>
+      <option value="Japan">Japan</option>
+       <option value="UAE">UAE</option>
+    </select>
+ <label for="Tocountry">Exchanging TO Country</label>
+    <select id="country" name="Exchanging TO Country">
+      <option value="Europe">Europe</option>
+      <option value="England">England</option>
+      <option value="usa">USA</option>
+      <option value="India">India</option>
+      <option value="Japan">Japan</option>
+       <option value="UAE">UAE</option>
+    </select>
+
+    <label for="Bank">Bank Details</label>
+    <select id="Bank" name="Bank name">
+      <option value="Wells Fargo">Wells Fargo</option>
+      <option value="Barclays">Barlays</option>
+      <option value="Bank Of america">Bank Of America</option>
+    </select>
+<label for="amount">Amount To Convert</label>
+    <input type="text" id="lname" name="lastname" placeholder="amount..">
+    <label for="subject">Purpose of visit</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<script language="JavaScript">
+<!--
+function euroConverter(){
+document.converter.dollar.value = document.converter.euro.value * 1.470
+document.converter.pound.value = document.converter.euro.value * 0.717
+document.converter.yen.value = document.converter.euro.value * 165.192
+document.converter.rupee.value = document.converter.euro.value *79.13
+document.converter.dirham.value = document.converter.euro.value *0.24 
+
+
+}
+function dollarConverter(){
+document.converter.euro.value = document.converter.dollar.value * 0.680
+document.converter.pound.value = document.converter.dollar.value * 0.488
+document.converter.yen.value = document.converter.dollar.value * 112.36
+document.converter.rupee.value = document.converter.dollar.value * 71.08
+document.converter.dirham.value = document.converter.dollar.value * 0.27
+
+
+}
+function poundConverter(){
+document.converter.dollar.value = document.converter.pound.value * 2.049
+document.converter.euro.value = document.converter.pound.value * 1.394
+document.converter.yen.value = document.converter.pound.value * 230.27
+document.converter.rupee.value = document.converter.pound.value *93.11
+document.converter.dirham.value = document.converter.pound.value *0.21 
+
+
+}
+function yenConverter(){
+document.converter.dollar.value = document.converter.yen.value * 0.0089
+document.converter.pound.value = document.converter.yen.value * 0.00434
+document.converter.euro.value = document.converter.yen.value * 0.00605
+document.converter.rupee.value = document.converter.yen.value * 0.65
+document.converter.dirham.value = document.converter.yen.value *29.80 
+
+}
+function rupeeConverter(){
+document.converter.dollar.value = document.converter.rupee.value * 71.09
+document.converter.pound.value = document.converter.rupee.value * 93.14
+document.converter.euro.value = document.converter.rupee.value * 79.14
+document.converter.yen.value = document.converter.rupee.value * 0.65
+document.converter.dirham.value = document.converter.rupee.value *19.35 
+
+}
+function dirhamConverter(){
+document.converter.dollar.value = document.converter.dirham.value *0.27 
+document.converter.pound.value = document.converter.dirham.value * 0.21
+document.converter.euro.value = document.converter.dirham.value *0.24
+document.converter.yen.value = document.converter.dirham.value * 29.80
+document.converter.rupee.value = document.converter.dirham.value * 19.35
+
+}
+
+//-->
+</script>
+<h1>$ Converter </h1>
+<form name="converter">
+<table border="0">
+<tr>
+<td>Euro: </td><td><input type="text" name="euro" onChange="euroConverter()" /></td>
+</tr>
+<tr>
+<td>US Dollar: </td><td><input type="text" name="dollar" onChange="dollarConverter()" /></td>
+</tr>
+<tr>
+<td>British Pound:</td><td><input type="text" name="pound" onChange="poundConverter()" /></td>
+</tr>
+<tr>
+<td>Japanese Yen: </td><td><input type="text" name="yen" onChange="yenConverter()" /></td>
+</tr>
+<td>Indian Rupee: </td><td><input type="text" name="rupee" onChange="rupeeConverter()" /></td>
+</tr>
+<td>Dubai Dinar: </td><td><input type="text" name="dirham" onChange="dirhamConverter()" /></td>
+</tr>
+<tr>
+<td colspan="2" align="center"><input type="button" value="Convert!" /></td>
+</tr>
+</style>
+</head>
